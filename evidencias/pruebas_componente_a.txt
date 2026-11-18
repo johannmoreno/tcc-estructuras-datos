@@ -1,0 +1,10 @@
+========================================================
+EVIDENCIAS DE EJECUCIÓN — Pruebas.java (Componente A: Grafo)
+Proyecto: C:\Proyectos_UDC\TCC Estructura datos\Grafo
+Ejecutado desde: IntelliJ IDEA (Run 'Pruebas.main()')
+========================================================
+
+Cada bloque corresponde a una ejecución pegada por el CIPA, en orden
+cronológico, junto con la fecha y el commit en que se generó.
+
+
