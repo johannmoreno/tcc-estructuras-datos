@@ -8,3 +8,48 @@ Cada bloque corresponde a una ejecución pegada por el CIPA, en orden
 cronológico, junto con la fecha y el commit en que se generó.
 
 
+C:\Users\ASUS\.jdks\openjdk-26.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2026.1.1\lib\idea_rt.jar=58935" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Proyectos_UDC\TCC Estructura datos\Grafo\out\production\Grafo" Pruebas
+========================================
+ CASOS DE PRUEBA - PROYECTO GRAFO/DIJKSTRA
+========================================
+
+--- Caso 1: cantidad de vertices ---
+[PASA] cantidadVertices() == 4  (esperado=4, obtenido=4)
+
+--- Caso 2: adyacencia ---
+[PASA] sonAdyacentes(A,B) == true  (esperado=true, obtenido=true)
+[PASA] sonAdyacentes(A,D) == false  (esperado=false, obtenido=false)
+[PASA] sonAdyacentes(A,C) == true  (esperado=true, obtenido=true)
+
+--- Caso 3: grado de los vertices ---
+[PASA] grado(A) == 2  (esperado=2, obtenido=2)
+[PASA] grado(B) == 2  (esperado=2, obtenido=2)
+[PASA] grado(C) == 3  (esperado=3, obtenido=3)
+[PASA] grado(D) == 1  (esperado=1, obtenido=1)
+
+--- Caso 4: recorrido BFS desde A ---
+[PASA] recorridoBFS(A) == [A, B, C, D]  (esperado=[A, B, C, D], obtenido=[A, B, C, D])
+
+--- Caso 5: recorrido DFS desde A ---
+[PASA] recorridoDFS(A) == [A, C, D, B]  (esperado=[A, C, D, B], obtenido=[A, C, D, B])
+
+--- Caso 6: Dijkstra A -> D (debe preferir el camino mas largo en pasos pero mas corto en distancia) ---
+[PASA] dijkstra(A,D).getDistanciaTotal() == 6.0  (esperado=6.0, obtenido=6.0)
+[PASA] dijkstra(A,D) ruta == [A, B, C, D]  (esperado=[A, B, C, D], obtenido=[A, B, C, D])
+
+--- Caso 7: eliminar arista y volver a verificar adyacencia ---
+[PASA] sonAdyacentes(A,C) == false tras eliminarArista  (esperado=false, obtenido=false)
+[PASA] grado(A) == 1 tras eliminar la arista A-C  (esperado=1, obtenido=1)
+
+--- Caso 8: eliminar vertice ---
+[PASA] cantidadVertices() == 3 tras eliminar D  (esperado=3, obtenido=3)
+
+--- Caso 9: cargar mapa desde JSON ---
+[PASA] cargarDesdeJSON: cantidadVertices() > 0  (esperado=true, obtenido=true)
+   Vertices cargados: 8
+
+========================================
+RESULTADO FINAL: 16 / 16 casos exitosos
+========================================
+
+Process finished with exit code 0

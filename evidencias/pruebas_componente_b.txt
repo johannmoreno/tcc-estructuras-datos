@@ -7,4 +7,82 @@ Ejecutado desde: IntelliJ IDEA (Run 'Pruebas.main()')
 Cada bloque corresponde a una ejecución pegada por el CIPA, en orden
 cronológico, junto con la fecha y el commit en que se generó.
 
+C:\Users\ASUS\.jdks\openjdk-26.0.1\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2026.1.1\lib\idea_rt.jar=53914" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Proyectos_UDC\TCC Estructura datos\Arbol\out\production\Arbol" Pruebas
+========================================
+ CASOS DE PRUEBA - ARBOL DE EXPRESION
+========================================
+
+--- Caso 1: conversion infija -> postfija (sin parentesis) ---
+[PASA] convertirAPostfija('3 + 4') == '3 4 +'  (esperado=3 4 +, obtenido=3 4 +)
+
+--- Caso 2: precedencia de operadores sin parentesis ---
+[PASA] convertirAPostfija('2 + 3 * 4') == '2 3 4 * +'  (esperado=2 3 4 * +, obtenido=2 3 4 * +)
+
+--- Caso 3: parentesis simples ---
+[PASA] convertirAPostfija('(4 + 5) * (3 - 1)') == '4 5 + 3 1 - *'  (esperado=4 5 + 3 1 - *, obtenido=4 5 + 3 1 - *)
+
+--- Caso 4: construccion del arbol (raiz y hijos) ---
+[PASA] raiz.getDato() == '+'  (esperado=+, obtenido=+)
+[PASA] raiz.getIzquierdo().getDato() == '3'  (esperado=3, obtenido=3)
+[PASA] raiz.getDerecho().getDato() == '4'  (esperado=4, obtenido=4)
+
+--- Caso 5: recorridos sobre '(4 + 5) * (3 - 1)' ---
+[PASA] prefijo == '* + 4 5 - 3 1'  (esperado=* + 4 5 - 3 1, obtenido=* + 4 5 - 3 1)
+[PASA] postorden == '4 5 + 3 1 - *'  (esperado=4 5 + 3 1 - *, obtenido=4 5 + 3 1 - *)
+[PASA] infijo == '((4 + 5) * (3 - 1))'  (esperado=((4 + 5) * (3 - 1)), obtenido=((4 + 5) * (3 - 1)))
+[PASA] resultado == 18.0  (esperado=18.0, obtenido=18.0)
+
+--- Caso 6: expresion con parentesis anidados ---
+[PASA] postfija == '2 3 + 4 * 6 2 / -'  (esperado=2 3 + 4 * 6 2 / -, obtenido=2 3 + 4 * 6 2 / -)
+[PASA] resultado == 17.0  ((2+3)*4=20, 6/2=3, 20-3=17)  (esperado=17.0, obtenido=17.0)
+
+--- Caso 7: numeros decimales ---
+[PASA] resultado == 4.0  (esperado=4.0, obtenido=4.0)
+
+--- Caso 8: cargar y evaluar formulas de prueba desde JSON ---
+[PASA] se leyeron expresiones de prueba (cantidad > 0)  (esperado=true, obtenido=true)
+   Expresiones leidas: 5
+Expresion: 3 + 4
+Postfija:  3 4 +
+Prefijo:   + 3 4
+Infijo:    (3 + 4)
+Postorden: 3 4 +
+Resultado: 7.0
+----------------------------------------
+Expresion: 2 + 3 * 4
+Postfija:  2 3 4 * +
+Prefijo:   + 2 * 3 4
+Infijo:    (2 + (3 * 4))
+Postorden: 2 3 4 * +
+Resultado: 14.0
+----------------------------------------
+Expresion: (4 + 5) * (3 - 1)
+Postfija:  4 5 + 3 1 - *
+Prefijo:   * + 4 5 - 3 1
+Infijo:    ((4 + 5) * (3 - 1))
+Postorden: 4 5 + 3 1 - *
+Resultado: 18.0
+----------------------------------------
+Expresion: ((2 + 3) * 4) - (6 / 2)
+Postfija:  2 3 + 4 * 6 2 / -
+Prefijo:   - * + 2 3 4 / 6 2
+Infijo:    (((2 + 3) * 4) - (6 / 2))
+Postorden: 2 3 + 4 * 6 2 / -
+Resultado: 17.0
+----------------------------------------
+Expresion: 10 / 2 + 3 * (4 - 1)
+Postfija:  10 2 / 3 4 1 - * +
+Prefijo:   + / 10 2 * 3 - 4 1
+Infijo:    ((10 / 2) + (3 * (4 - 1)))
+Postorden: 10 2 / 3 4 1 - * +
+Resultado: 14.0
+----------------------------------------
+
+========================================
+RESULTADO FINAL: 14 / 14 casos exitosos
+========================================
+
+Process finished with exit code 0
+
+
 
