@@ -1,0 +1,53 @@
+/****************************************************************************
+ * Palabra de honor:
+ * - No he discutido ni mostrado el código de mi programa con alguien que no sea mi
+ *   compañero de CIPA, Profesor o con el monitor asignado a este curso.
+ * - No he utilizado código obtenido de otro u otros estudiantes,
+ *   o cualquier otra fuente no autorizada, ya sea modificado o sin modificar.
+ * - Si llego a hacer uso de código de IA Generativa, debo indicar con exactitud
+ *   qué análisis del código realicé.
+ * - Si cualquier código o documentación utilizada en mi programa no es de mi autoría,
+ *   debo señalarlo claramente con una cita apropiada en los comentarios de mi programa.
+ * - No copio y pego código de IA generativa sin analizarlo.
+ *
+ * SAID ALEJANDRO MARTELO DIAZ – <CÓDIGO> (integrante 1)
+ * JOHANN DAVID MORENO CASSIANI – <7502423002> (integrante 2)
+ * JUAN DAVID ALZATE GALVIS – <CÓDIGO> (integrante 3)
+ * DAVID SANTIAGO ESCAMILLA CASTRO – <7502410012> (integrante 4)
+ * MOISES BANDA PEREZ – <CÓDIGO> (integrante 5)
+ *
+ ****************************************************************************/
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+/**
+ * Registro histórico de una consulta de ruta realizada por el usuario.
+ * Se guarda en el archivo binario de historial.
+ *
+ * Se entrega completa.
+ */
+public class ConsultaRuta implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    private String origen;
+    private String destino;
+    private String rutaEncontrada;
+    private double distanciaTotal;
+    private String fechaHora;
+
+    public ConsultaRuta(String origen, String destino, String rutaEncontrada, double distanciaTotal) {
+        this.origen = origen;
+        this.destino = destino;
+        this.rutaEncontrada = rutaEncontrada;
+        this.distanciaTotal = distanciaTotal;
+        this.fechaHora = LocalDateTime.now().toString();
+    }
+
+    @Override
+    public String toString() {
+        return fechaHora + " | " + origen + " -> " + destino
+                + " | Ruta: " + rutaEncontrada
+                + " | Distancia: " + distanciaTotal + " km";
+    }
+}

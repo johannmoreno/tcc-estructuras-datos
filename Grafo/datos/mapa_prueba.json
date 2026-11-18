@@ -1,0 +1,24 @@
+{
+  "vertices": [
+    {"nombre": "Centro Historico", "x": 60, "y": 260},
+    {"nombre": "Getsemani", "x": 160, "y": 180},
+    {"nombre": "La Matuna", "x": 140, "y": 300},
+    {"nombre": "Manga", "x": 260, "y": 340},
+    {"nombre": "Pie de la Popa", "x": 300, "y": 220},
+    {"nombre": "Bocagrande", "x": 100, "y": 420},
+    {"nombre": "Crespo", "x": 420, "y": 80},
+    {"nombre": "Castillo San Felipe", "x": 380, "y": 260}
+  ],
+  "aristas": [
+    {"origen": "Centro Historico", "destino": "Getsemani", "distancia": 1.2},
+    {"origen": "Centro Historico", "destino": "La Matuna", "distancia": 1.5},
+    {"origen": "Getsemani", "destino": "Pie de la Popa", "distancia": 2.3},
+    {"origen": "La Matuna", "destino": "Manga", "distancia": 2.8},
+    {"origen": "La Matuna", "destino": "Bocagrande", "distancia": 3.5},
+    {"origen": "Manga", "destino": "Pie de la Popa", "distancia": 1.7},
+    {"origen": "Pie de la Popa", "destino": "Castillo San Felipe", "distancia": 1.1},
+    {"origen": "Castillo San Felipe", "destino": "Crespo", "distancia": 2.6},
+    {"origen": "Pie de la Popa", "destino": "Crespo", "distancia": 4.0},
+    {"origen": "Getsemani", "destino": "La Matuna", "distancia": 0.9}
+  ]
+}
