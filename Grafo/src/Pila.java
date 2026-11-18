@@ -14,7 +14,7 @@
  * JOHANN DAVID MORENO CASSIANI – <7502423002> (integrante 2)
  * JUAN DAVID ALZATE GALVIS – <7502410040> (integrante 3)
  * DAVID SANTIAGO ESCAMILLA CASTRO – <7502410012> (integrante 4)
- * MOISES BANDA PEREZ – <CÓDIGO> (integrante 5)
+ * MOISES BANDA PEREZ – <7502320047> (integrante 5)
  *
  ****************************************************************************/
 
