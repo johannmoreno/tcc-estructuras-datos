@@ -10,9 +10,9 @@
  *   debo señalarlo claramente con una cita apropiada en los comentarios de mi programa.
  * - No copio y pego código de IA generativa sin analizarlo.
  *
- * SAID ALEJANDRO MARTELO DIAZ – <CÓDIGO> (integrante 1)
+ * SAID ALEJANDRO MARTELO DIAZ – <7502410025> (integrante 1)
  * JOHANN DAVID MORENO CASSIANI – <7502423002> (integrante 2)
- * JUAN DAVID ALZATE GALVIS – <CÓDIGO> (integrante 3)
+ * JUAN DAVID ALZATE GALVIS – <7502410040> (integrante 3)
  * DAVID SANTIAGO ESCAMILLA CASTRO – <7502410012> (integrante 4)
  * MOISES BANDA PEREZ – <CÓDIGO> (integrante 5)
  *
